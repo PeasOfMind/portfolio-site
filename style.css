@@ -1,6 +1,15 @@
+body {
+    font-family: 'Lato', sans-serif;
+    padding: 0 0.5em;
+}
+
 nav {
-    background-color: lightgrey;
     padding: 0.5em 0;
+    background-color: lightgrey;
+}
+
+nav, footer {
+    margin: 0 -0.5em;
 }
 
 nav > ul {
@@ -20,11 +29,22 @@ header, footer {
 
 h1 {
     font-size: 2em;
+    padding-bottom: 0.2em;
 }
 
 h2 {
     font-size: 1.5em;
+    padding-bottom: 0.5em;
+}
+
+h1, h2, #headline {
     text-align: center;
+    font-family: 'Quattrocento Sans', sans-serif;
+}
+
+h3 {
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 footer {
@@ -49,15 +69,22 @@ footer > ul {
 }
 
 #headline {
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 #bio {
-    background-color: grey;
-    color: white;
-    padding: 2em 0;
+    padding: 1.5em 0.2em;
+}
+
+#bio p, #projects p {
+    line-height: 1.3em;
+    padding-top: 0.5em;
 }
 
 #projects {
     padding: 2em 0;
+}
+
+#bio, #projects {
+    border-top: 1px solid darkgrey;
 }
