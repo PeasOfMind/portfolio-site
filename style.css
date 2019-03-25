@@ -19,6 +19,18 @@ nav > ul {
 
 header {
     padding: 3em 0;
+    /* background:
+    linear-gradient(
+        rgba(255, 255, 255, 0.6), 
+        rgba(255, 255, 255, 0.6)
+      ),
+    url("./images/hero-photo.JPG"); */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 header, footer {
@@ -72,12 +84,24 @@ footer > ul {
     font-size: 2em;
 }
 
+.contact-text {
+    margin-bottom: 0.4em;
+}
+
 #headline {
     font-size: 1.2em;
 }
 
-#bio {
-    padding: 1.5em 0.2em;
+#projects {
+    padding: 1.5em 0;
+}
+
+#projects p {
+    color: grey;
+}
+
+#bio, #projects {
+    border-top: 1px solid darkgrey;
 }
 
 #bio p, #projects p {
@@ -85,10 +109,26 @@ footer > ul {
     padding-top: 0.5em;
 }
 
-#projects {
-    padding: 1.5em 0;
+#bio {
+    padding: 1.5em 0.2em;
 }
 
-#bio, #projects {
-    border-top: 1px solid darkgrey;
+#bio-info {
+    display: flex;
+    flex-direction: column;
+}
+
+#profile-photo {
+    max-width: 250px;
+    align-self: center;
+}
+
+@media only screen and (min-width: 600px){
+    #bio-info {
+        flex-direction: row;
+    }
+    
+    #bio-text {
+        margin-left: 0.6em;
+    }
 }
