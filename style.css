@@ -19,18 +19,6 @@ nav > ul {
 
 header {
     padding: 3em 0;
-    /* background:
-    linear-gradient(
-        rgba(255, 255, 255, 0.6), 
-        rgba(255, 255, 255, 0.6)
-      ),
-    url("./images/hero-photo.JPG"); */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
 }
 
 header, footer {
@@ -73,13 +61,24 @@ footer > ul {
 .project {
     padding: 1em 0;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-screenshot {
+    max-width: 100%;
+    max-height: 450px;
+    background: transparent;
+    align-self: center;
 }
 
 .contact-link {
     padding: 0.2em 0.5em;
 }
 
-.contact-link a {
+.contact-link > a {
     color: black;
     font-size: 2em;
 }
