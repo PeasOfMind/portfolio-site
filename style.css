@@ -1,5 +1,5 @@
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     padding: 0 0.5em;
 }
 
@@ -39,7 +39,7 @@ h2 {
 
 h1, h2, #headline {
     text-align: center;
-    font-family: 'Quattrocento Sans', sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 h3 {
@@ -89,6 +89,7 @@ footer > ul {
 
 #headline {
     font-size: 1.2em;
+    color: grey;
 }
 
 #projects {
@@ -120,6 +121,10 @@ footer > ul {
 #profile-photo {
     max-width: 250px;
     align-self: center;
+}
+
+#bio-text {
+    color: grey;
 }
 
 @media only screen and (min-width: 600px){
