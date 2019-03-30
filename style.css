@@ -44,13 +44,15 @@ main {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     padding-bottom: 0.2em;
+    letter-spacing: 0.15em;
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 2em;
     padding-bottom: 0.5em;
+    letter-spacing: 0.15em;
 }
 
 h1, h2, #headline {
@@ -83,7 +85,7 @@ footer > ul {
     padding: 1em 0;
     text-align: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -93,6 +95,16 @@ footer > ul {
     max-height: 450px;
     background: transparent;
     align-self: center;
+}
+
+.project-links {
+    margin-top: 0.3em;
+}
+
+.project-links > a {
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid black;
 }
 
 .contact-link {
