@@ -20,10 +20,8 @@ header, footer {
 
 nav {
     margin-top: 500px;
-    padding: 0.5em 0;
     position: sticky;
     top: 0;
-    border-bottom: 1px solid darkgrey;
     z-index: 1;
     background-color: white;
 }
@@ -35,6 +33,9 @@ footer {
 nav > ul {
     display: flex;
     justify-content: space-around;
+    margin: 0 0.5em;
+    padding: 0.5em 0;
+    border-bottom: 1px solid darkgrey;
 }
 
 main {
