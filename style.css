@@ -1,14 +1,34 @@
 body {
     font-family: 'Open Sans', sans-serif;
-    padding: 0 0.5em;
+    position: relative;
+}
+
+header {
+    padding: 0.8em 0 0.2em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+}
+
+header, footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 nav {
+    margin-top: 500px;
     padding: 0.5em 0;
-    background-color: lightgrey;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid darkgrey;
+    z-index: 1;
+    background-color: white;
 }
 
-nav, footer {
+footer {
     margin: 0 -0.5em;
 }
 
@@ -17,14 +37,9 @@ nav > ul {
     justify-content: space-around;
 }
 
-header {
-    padding: 3em 0;
-}
-
-header, footer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+main {
+    padding: 0 0.5em;
+    background-color: white;
 }
 
 h1 {
@@ -56,6 +71,11 @@ footer > ul {
     display: flex;
     flex-direction: row;
     padding: 0.3em 0;
+}
+
+.hero-img {
+    max-height: 70vh;
+    display: block;
 }
 
 .project {
@@ -90,6 +110,7 @@ footer > ul {
 #headline {
     font-size: 1.2em;
     color: grey;
+    padding-bottom: 0.8em;
 }
 
 #projects {
@@ -98,10 +119,7 @@ footer > ul {
 
 #projects p {
     color: grey;
-}
-
-#bio, #projects {
-    border-top: 1px solid darkgrey;
+    padding-bottom: 0.3em;
 }
 
 #bio p, #projects p {
@@ -111,6 +129,7 @@ footer > ul {
 
 #bio {
     padding: 1.5em 0.2em;
+    border-top: 1px solid darkgrey;
 }
 
 #bio-info {
