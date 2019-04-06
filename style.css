@@ -10,6 +10,7 @@ header {
     left: 0;
     z-index: -1;
     width: 100%;
+    max-height: 90vh;
 }
 
 header, footer {
@@ -19,11 +20,10 @@ header, footer {
 }
 
 nav {
-    margin-top: 500px;
-    position: sticky;
-    top: 0;
-    z-index: 1;
     background-color: white;
+    border-bottom: 1px solid darkgrey;
+    width: 100%;
+    box-shadow: 0 8px 6px -6px rgba(0,0,0,0.2);
 }
 
 footer {
@@ -33,14 +33,14 @@ footer {
 nav > ul {
     display: flex;
     justify-content: space-around;
-    margin: 0 0.5em;
+    /* margin: 0 0.5em; */
     padding: 0.5em 0;
-    border-bottom: 1px solid darkgrey;
 }
 
 main {
     padding: 0 0.5em;
     background-color: white;
+    margin: 0 -0.5em;
 }
 
 h1 {
@@ -79,6 +79,11 @@ footer > ul {
 .hero-img {
     max-height: 70vh;
     display: block;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
 }
 
 .project {
@@ -157,6 +162,28 @@ footer > ul {
 
 #bio-text {
     color: grey;
+}
+
+#thinkful-link {
+    color: black;
+    font-weight: bold;
+}
+
+#thinkful-link:hover, #thinkful-link:focus {
+    text-decoration: none;
+}
+
+
+#linkedin:hover, #linkedin:focus-within {
+    color: #0077B5;
+}
+
+#github:hover, #github:focus-within {
+    color: #6e5494;
+}
+
+#email:hover, #email:focus-within {
+    color: #00AB6B;
 }
 
 @media only screen and (min-width: 600px){
