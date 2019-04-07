@@ -166,6 +166,8 @@ footer > ul {
 
 #bio-text {
     color: grey;
+    text-align: justify;
+    padding: 0 0.6em;
 }
 
 #thinkful-link {
@@ -193,9 +195,5 @@ footer > ul {
 @media only screen and (min-width: 600px){
     #bio-info {
         flex-direction: row;
-    }
-    
-    #bio-text {
-        margin-left: 0.6em;
     }
 }
