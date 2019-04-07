@@ -18,27 +18,9 @@ function setHeights() {
   mainTop = main.offsetTop;
 }
 
-// Make navigation sticky
-function addStickyNav() {
-  if (window.pageYOffset >= headerHeight) {
-    navbar.classList.add("sticky");
-    navbar.style.marginTop = 0;
-    main.style.paddingTop = `${mainTop + navbar.offsetHeight + headerHeight}px`
-  } else {
-    navbar.classList.remove("sticky");
-    navbar.style.marginTop = `${headerHeight}px`;
-    main.style.paddingTop = `${mainTop}px`;
-  }
-}
-
 window.addEventListener('load', () => {
   setYear();
   setHeights();
 });
 
-window.addEventListener('resize', () => {
-  setHeights();
-  addStickyNav();
-});
-
-window.addEventListener('scroll', addStickyNav);
+window.addEventListener('resize', setHeights);

@@ -23,6 +23,10 @@ nav {
     background-color: white;
     border-bottom: 1px solid darkgrey;
     width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
     box-shadow: 0 8px 6px -6px rgba(0,0,0,0.2);
 }
 
@@ -80,11 +84,11 @@ footer > ul {
     max-height: 70vh;
     display: block;
 }
-
+/* 
 .sticky {
     position: fixed;
     top: 0;
-}
+} */
 
 .project {
     padding: 1em 0;
