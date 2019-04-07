@@ -4,6 +4,12 @@ const navbar = document.getElementsByTagName("nav")[0];
 const header = document.getElementsByTagName("header")[0];
 const main = document.getElementsByTagName("main")[0];
 
+//Get current year
+function setYear(){
+  const currentYear = new Date().getFullYear();
+  document.getElementById("footer-text").textContent += ` ${currentYear}`;
+}
+
 //Calculate & set heights when the window is loaded or resized
 function setHeights() {
   navTop = navbar.offsetTop;
@@ -14,8 +20,6 @@ function setHeights() {
 
 // Make navigation sticky
 function addStickyNav() {
-  console.log('navTop:', navTop, 'page offset:', window.pageYOffset)
-  console.log('main offset top', main.offsetTop)
   if (window.pageYOffset >= headerHeight) {
     navbar.classList.add("sticky");
     navbar.style.marginTop = 0;
@@ -27,6 +31,14 @@ function addStickyNav() {
   }
 }
 
-window.addEventListener('load', setHeights)
-window.addEventListener('scroll', addStickyNav)
-window.addEventListener('resize', setHeights)
+window.addEventListener('load', () => {
+  setYear();
+  setHeights();
+});
+
+window.addEventListener('resize', () => {
+  setHeights();
+  addStickyNav();
+});
+
+window.addEventListener('scroll', addStickyNav);
