@@ -51,3 +51,4 @@ document.getElementById("linkedin").addEventListener("focus", () => changeContac
 document.getElementById("email").addEventListener("focus", () => changeContactText("email"));
 
 document.getElementById("contact-list").addEventListener("mouseleave", resetContactText);
+document.getElementById("contact-list").addEventListener("focusout", resetContactText);
