@@ -1,14 +1,30 @@
 // Declare variables globally for access in other functions
 let navTop, headerHeight, mainTop
-const navbar = document.getElementsByTagName("nav")[0];
-const header = document.getElementsByTagName("header")[0];
-const main = document.getElementsByTagName("main")[0];
+const navbar = document.querySelector("nav");
+const header = document.querySelector("header");
+const main = document.querySelector("main");
+
 const largeScreenQuery = window.matchMedia("(min-width: 850px)");
 
 //Get current year
 function setYear(){
   const currentYear = new Date().getFullYear();
   document.getElementById("footer-text").textContent += ` ${currentYear}`;
+}
+
+//Scroll to section from nav link
+function scrollToSection(target){
+  let navElement;
+  if (target.textContent === "Projects"){
+    navElement = document.querySelector('#projects');
+  } else if (target.textContent === "About"){
+    navElement = document.querySelector('#bio');
+  } else if (target.textContent === "Contact"){
+    navElement = document.querySelector('footer');
+  }
+  const loc = navElement.getBoundingClientRect().top;
+  const topLoc = loc + navElement.offsetTop;
+  window.scroll({top: topLoc, left: 0, behavior: "smooth"});
 }
 
 //Calculate & set heights when the window is loaded or resized
@@ -61,6 +77,12 @@ window.addEventListener('load', () => {
 
 window.addEventListener('resize', setHeights);
 largeScreenQuery.addListener(adjustProjectLinks);
+
+document.addEventListener('click', event =>  {
+  if (event.target.classList.contains('nav-links')) {
+    scrollToSection(event.target);
+  }
+})
 
 document.getElementById("github").addEventListener("mouseover", () => changeContactText("github"));
 document.getElementById("linkedin").addEventListener("mouseover", () => changeContactText("linkedin"));

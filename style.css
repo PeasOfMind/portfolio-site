@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     position: relative;
@@ -38,6 +42,9 @@ nav > ul {
     display: flex;
     justify-content: space-around;
     padding: 0.5em 0;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 main {
@@ -83,11 +90,15 @@ footer > ul {
     max-height: 70vh;
     display: block;
 }
-/* 
-.sticky {
-    position: fixed;
-    top: 0;
-} */
+
+.nav-links {
+    cursor: pointer;
+}
+
+.nav-links:hover, .nav-links:focus {
+    color:#9F6550;
+    font-weight: bold;
+}
 
 .project {
     padding: 1em 0;
@@ -178,6 +189,12 @@ footer > ul {
     padding-bottom: 0.8em;
 }
 
+#projects, #bio {
+    max-width: 1052px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #projects {
     padding: 1.5em 0;
 }
@@ -234,14 +251,6 @@ footer > ul {
 
 #email:hover, #email:focus-within {
     color: #00AB6B;
-}
-
-@media only screen and (min-width: 1100px){
-    #projects, #bio {
-        max-width: 1052px;
-        margin-left: auto;
-        margin-right: auto;
-    }
 }
 
 @media only screen and (min-width: 850px){
