@@ -98,13 +98,50 @@ footer > ul {
     justify-content: center;
 }
 
+.live-app-link {
+    position: relative;
+    display: table;
+    margin: 0;
+    padding: 0;
+}
+
 .project-screenshot {
     max-width: 100%;
     max-height: 450px;
-    background: transparent;
     align-self: center;
     border: 1px grey solid;
     border-radius: 5px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.live-app-link:hover > .project-screenshot, .live-app-link:focus > .project-screenshot {
+    filter: grayscale(100%) blur(2px);
+    cursor: pointer;
+}
+
+.view-project {
+    opacity: 0;
+    padding: 0.2em 0;
+    color: white;
+    background-color: rgba(115, 73, 58, 0.7);
+    font-size: 2em;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+
+.live-app-link:hover > .view-project, .live-app-link:focus > .view-project {
+    opacity: 1;
 }
 
 .project-links {
@@ -145,12 +182,12 @@ footer > ul {
     padding: 1.5em 0;
 }
 
-#projects p {
+.project-info > p {
     color: grey;
-    padding-bottom: 0.3em;
+    padding-bottom: 0.5em;
 }
 
-#bio p, #projects p {
+#bio-text > p, .project-info > p {
     line-height: 1.3em;
     padding-top: 0.5em;
 }
@@ -197,6 +234,37 @@ footer > ul {
 
 #email:hover, #email:focus-within {
     color: #00AB6B;
+}
+
+@media only screen and (min-width: 1100px){
+    #projects, #bio {
+        max-width: 1052px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (min-width: 850px){
+    .project {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .project-info {
+        text-align: left;
+        margin: 0 0.5em;
+    }
+
+    .live-app-link {
+        flex-shrink: 0;
+    }
+
+    .project-screenshot {
+        height: 450px;
+        width: auto;
+    }
+
 }
 
 @media only screen and (min-width: 600px){

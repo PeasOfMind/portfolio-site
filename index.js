@@ -3,6 +3,7 @@ let navTop, headerHeight, mainTop
 const navbar = document.getElementsByTagName("nav")[0];
 const header = document.getElementsByTagName("header")[0];
 const main = document.getElementsByTagName("main")[0];
+const largeScreenQuery = window.matchMedia("(min-width: 850px)");
 
 //Get current year
 function setYear(){
@@ -16,6 +17,22 @@ function setHeights() {
   headerHeight = header.offsetHeight;
   navbar.style.marginTop = `${headerHeight}px`;
   mainTop = main.offsetTop;
+}
+
+//Move project links on screen size larger than 850px
+function adjustProjectLinks(){
+  const linksArray = document.getElementsByClassName("project-links");
+  if (largeScreenQuery.matches){
+    const projectsInfoArray = document.getElementsByClassName("project-info");
+    for (let i = 0; i< linksArray.length; i++){
+      projectsInfoArray[i].appendChild(linksArray[i]);
+    }
+  } else {
+    const projectsArray = document.getElementsByClassName("project");
+    for (let i = 0; i< linksArray.length; i++){
+      projectsArray[i].appendChild(linksArray[i]);
+    }
+  }
 }
 
 //Update contact text based on which contact link is hovered over
@@ -40,7 +57,10 @@ window.addEventListener('load', () => {
   setHeights();
 });
 
+//Event Listeners
+
 window.addEventListener('resize', setHeights);
+largeScreenQuery.addListener(adjustProjectLinks);
 
 document.getElementById("github").addEventListener("mouseover", () => changeContactText("github"));
 document.getElementById("linkedin").addEventListener("mouseover", () => changeContactText("linkedin"));
@@ -52,3 +72,6 @@ document.getElementById("email").addEventListener("focus", () => changeContactTe
 
 document.getElementById("contact-list").addEventListener("mouseleave", resetContactText);
 document.getElementById("contact-list").addEventListener("focusout", resetContactText);
+
+//Functions executed immediately on page load
+adjustProjectLinks();
