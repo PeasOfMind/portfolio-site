@@ -116,6 +116,11 @@ footer > ul {
     justify-content: center;
 }
 
+.project-info > p {
+    color: grey;
+    padding: 0.5em 0;
+    line-height: 1.3em;
+}
 .live-app-link {
     position: relative;
     display: table;
@@ -173,8 +178,7 @@ footer > ul {
     padding: 5px 10px;
     border-radius: 2px;
     font-weight: bold;
-    font-size: 1em;
-    outline: none;
+    font-size: 1em; 
     text-decoration: none;
 }
 
@@ -186,7 +190,11 @@ footer > ul {
 }
 
 .project-links > a:active {
-    box-shadow: inset 1px 1px 1px #DFDFDF;   
+    box-shadow: inset 1px 1px 1px #DFDFDF;
+}
+
+.client-code {
+    margin-right: 0.4em;
 }
 
 .contact-link {
@@ -220,12 +228,6 @@ footer > ul {
 
 #projects > h2 {
     padding-bottom: 0;
-}
-
-.project-info > p {
-    color: grey;
-    padding: 0.5em 0;
-    line-height: 1.3em;
 }
 
 #bio-text > p {
