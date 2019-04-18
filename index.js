@@ -15,11 +15,11 @@ function setYear(){
 //Scroll to section from nav link
 function scrollToSection(target){
   let navElement;
-  if (target.textContent === "Projects"){
+  if (target.textContent === "PROJECTS"){
     navElement = document.querySelector('#projects');
-  } else if (target.textContent === "About"){
+  } else if (target.textContent === "ABOUT"){
     navElement = document.querySelector('#bio');
-  } else if (target.textContent === "Contact"){
+  } else if (target.textContent === "CONTACT"){
     navElement = document.querySelector('footer');
   }
   const loc = navElement.getBoundingClientRect().top;
