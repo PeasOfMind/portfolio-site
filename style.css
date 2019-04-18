@@ -77,8 +77,13 @@ h3 {
     letter-spacing:  0.08em;
 }
 
+h4 {
+    margin-top: 0.8em;
+    font-weight: bold;
+}
+
 footer {
-    background-color: lightgrey;
+    background-color:#E0E0E0;
     padding: 0.5em 0;
 }
 
@@ -103,7 +108,7 @@ footer > ul {
 }
 
 .project {
-    padding: 1em 0;
+    padding: 1.5em 0;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -114,7 +119,7 @@ footer > ul {
 .live-app-link {
     position: relative;
     display: table;
-    margin: 0;
+    margin: 0.5em 0 1em;
     padding: 0;
 }
 
@@ -163,13 +168,25 @@ footer > ul {
 
 .project-links > a {
     color: black;
+    background: #F3F3F3;
+    border: 1px #DADADA solid;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-weight: bold;
+    font-size: 1em;
+    outline: none;
     text-decoration: none;
-    border-bottom: 1px solid black;
 }
 
-.project-links > a:focus, .project-links > a:hover {
-    border: none;
-    color:#9F6550;
+.project-links > a:hover, .project-links > a:focus {
+    border: 1px #C6C6C6 solid;
+    box-shadow: 1px 1px 1px #EAEAEA;
+    color: #9F6550;
+    background: #F7F7F7;
+}
+
+.project-links > a:active {
+    box-shadow: inset 1px 1px 1px #DFDFDF;   
 }
 
 .contact-link {
@@ -198,15 +215,20 @@ footer > ul {
 }
 
 #projects {
-    padding: 1.5em 0;
+    padding: 2em 0 1.5em;
+}
+
+#projects > h2 {
+    padding-bottom: 0;
 }
 
 .project-info > p {
     color: grey;
-    padding-bottom: 0.5em;
+    padding: 0.5em 0;
+    line-height: 1.3em;
 }
 
-#bio-text > p, .project-info > p {
+#bio-text > p {
     line-height: 1.3em;
     padding-top: 0.5em;
 }
@@ -269,11 +291,16 @@ footer > ul {
 
     .live-app-link {
         flex-shrink: 0;
+        margin: 0;
     }
 
     .project-screenshot {
         height: 450px;
         width: auto;
+    }
+
+    .project-links {
+        margin-top: 0.8em;
     }
 
 }
