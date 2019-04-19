@@ -22,8 +22,9 @@ function scrollToSection(target){
   } else if (target.textContent === "CONTACT"){
     navElement = document.querySelector('footer');
   }
-  const loc = navElement.getBoundingClientRect().top;
-  const topLoc = loc + navElement.offsetTop;
+  const compStyle = window.getComputedStyle(navElement);
+  const padding = parseInt(compStyle.getPropertyValue('padding-top'));
+  const topLoc = navElement.offsetTop + headerHeight - padding;
   window.scroll({top: topLoc, left: 0, behavior: "smooth"});
 }
 
