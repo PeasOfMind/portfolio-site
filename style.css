@@ -1,5 +1,7 @@
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100vw;
 }
 
 body {
@@ -26,7 +28,7 @@ header, footer {
 nav {
     background-color: white;
     border-bottom: 1px solid darkgrey;
-    margin: 0 -0.5em;
+    /* margin: 0 -0.5em; */
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -34,9 +36,9 @@ nav {
     box-shadow: 0 8px 6px -6px rgba(0,0,0,0.2);
 }
 
-footer {
+/* footer {
     margin: 0 -0.5em;
-}
+} */
 
 nav > ul {
     display: flex;
@@ -50,7 +52,7 @@ nav > ul {
 main {
     padding: 0 1em;
     background-color: white;
-    margin: 0 -0.5em;
+    /* margin: 0 -0.5em; */
 }
 
 h1 {
@@ -114,6 +116,7 @@ footer > ul {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 .project-info > p {
@@ -123,9 +126,9 @@ footer > ul {
 }
 .live-app-link {
     position: relative;
-    display: table;
     margin: 0.5em 0 1em;
     padding: 0;
+    max-width: 548.83px;
 }
 
 .project-screenshot {
