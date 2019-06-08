@@ -19,7 +19,7 @@ header {
     max-height: 90vh;
 }
 
-header, footer, #contact {
+header, footer {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -87,6 +87,12 @@ h4 {
 footer {
     background-color:#E0E0E0;
     padding: 0.5em 0;
+}
+
+footer > ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0.3em 0;
 }
 
 .hero-img {
@@ -213,7 +219,7 @@ footer {
     padding-bottom: 0.8em;
 }
 
-#projects, #bio, {
+#projects, #bio {
     max-width: 1052px;
     margin-left: auto;
     margin-right: auto;
@@ -232,7 +238,7 @@ footer {
     padding-top: 0.5em;
 }
 
-#bio, #contact {
+#bio {
     padding: 1.5em 0.3em;
     border-top: 1px solid darkgrey;
 }
@@ -263,11 +269,6 @@ footer {
     color:#9F6550;
 }
 
-#contact > ul {
-    display: flex;
-    flex-direction: row;
-    padding: 0.3em 0;
-}
 
 #linkedin:hover, #linkedin:focus-within {
     color: #0077B5;
