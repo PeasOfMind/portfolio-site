@@ -227,6 +227,7 @@ footer > ul {
 
 #projects {
     padding: 2em 0 1.5em;
+    border-top: 1px solid darkgrey;
 }
 
 #projects > h2 {
@@ -235,12 +236,11 @@ footer > ul {
 
 #bio-text > p {
     line-height: 1.3em;
-    padding-top: 0.5em;
+    padding-top: 0.7em;
 }
 
 #bio {
     padding: 1.5em 0.3em;
-    border-top: 1px solid darkgrey;
 }
 
 #bio-info {
